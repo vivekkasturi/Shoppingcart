@@ -1,0 +1,44 @@
+<Products />
+
+{{this.lengthOfCart}}
+<div class="cart-page">
+  <h2>Shopping Cart</h2>
+{{#each this.cart.cartItems as |item|}}
+
+<span>
+<h5>{{item.title}}</h5></span>
+<span><h5>{{item.price}}</h5></span>
+
+
+
+{{/each}}
+
+  <div class="cart-summary">
+    <h3>Order Summary</h3>
+
+    <div class="summary-item">
+      <span>Subtotal:</span>
+      <span>${{this.subTotal}}</span>
+    </div>
+
+    <div class="summary-item">
+      <span>Tax:</span>
+      <span>${{this.tax}}</span>
+    </div>
+
+    <div class="total-amount">
+      <span>Total:</span>
+      <span>${{this.totalAmount}}</span>
+    </div>
+
+  </div>
+
+ <div class="buttons">
+   
+     <LinkTo @route="products"> <button  class="back-button" type="button">Back</button></LinkTo>
+       <LinkTo  @route="index">
+      <button class="checkout-button" type="button">Checkout</button></LinkTo>
+
+     
+    </div>
+</div>

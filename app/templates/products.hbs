@@ -1,0 +1,28 @@
+<Products />
+
+{{this.lengthOfCart}}
+<ul class="product-grid">{{#each this.model as |item|}}
+
+    <div class="product-card">
+
+        <li>
+            <p>
+
+                <img src={{item.image}} alt="Product Image" />
+
+            <h2> {{item.title}}</h2>
+            <span>Price</span> <span>$</span> {{item.price}}
+            <span>Rating: </span>{{item.rating.rate}}
+            <LinkTo @route="cart"><button type="button" {{on "click" (fn this.addToCart item) }} >Add to Cart</button></LinkTo>
+
+
+
+            </p>
+
+        </li>
+
+
+    </div>
+    {{/each}}
+
+</ul>

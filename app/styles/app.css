@@ -1,1 +1,145 @@
 /* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+.header_heading {
+  text-align: center;
+  background-color: rgb(187 184 207 / 59%);
+}
+
+.fa.fa-shopping-cart {
+  display: flex;
+  font-size: 34px;
+  margin-right: 10px;
+}
+
+.products_comp {
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  list-style-type: none;
+}
+
+.products_view {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-card h2 {
+  font-size: 1.5rem;
+}
+
+.product-card p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.product-card span {
+  font-size: 1.25rem;
+  color: #e74c3c;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Apply some basic styling to the cart page */
+.cart-page {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Style the main heading */
+.cart-page h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Style the order summary container */
+.cart-summary {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Style the heading for the order summary */
+.cart-summary h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Style individual items in the summary */
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Style the total amount differently */
+.total-amount {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Add some padding to the entire summary section */
+.cart-summary p {
+  padding: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons .checkout-button {
+  background-color: green;
+  border-radius: 5px;
+  padding: auto;
+  cursor: pointer;
+}
+
+.buttons .back-button {
+  background-color: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: auto;
+}
+
+/* You can add more styles and customize further to match your design */
