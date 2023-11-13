@@ -1,15 +1,18 @@
-<Products />
 
-{{this.lengthOfCart}}
+
+
 <div class="cart-page">
   <h2>Shopping Cart</h2>
+
+  {{this.cart.uniqueItem}}
 {{#each this.cart.cartItems as |item|}}
 
 <span>
+
 <h5>{{item.title}}</h5></span>
 <span><h5>{{item.price}}</h5></span>
-
-
+<span><input type="number" value="{{item.quantity}}" min="0" {{on "change" (fn this.modifiedQuantity item value="target.value" ) }} /></span>
+<span><button {{on 'click' (fn this.delete item)}}>Delete</button></span>
 
 {{/each}}
 
@@ -39,6 +42,6 @@
        <LinkTo  @route="index">
       <button class="checkout-button" type="button">Checkout</button></LinkTo>
 
-     
+   
     </div>
 </div>

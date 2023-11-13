@@ -1,0 +1,29 @@
+{{!-- <section class="products_comp">
+
+
+  <p>
+
+                <img src={{item.image}} alt="Product Image" width="50px" height="30px"/>
+
+
+
+
+
+            <h2> {{item.title}}</h2>
+            <span>Price</span> <span>$</span> {{item.price}}
+            <span>Rating: </span>{{item.rating.rate}}
+            <LinkTo @route="cart"><button type="button" {{on "click" (fn this.addToCart item) }}>Add to Cart</button>
+            </LinkTo>
+            <button type="button" {{on "click" (fn this.zoomIn item)}}>Zoom In</button>
+            </p>
+
+
+</section> --}}
+
+
+<section class="products_comp">
+    <LinkTo @route="cart"><i class="fa fa-shopping-cart" ></i><p>test {{this.lengthOfCart}}</p></LinkTo>
+     
+
+      
+</section>
