@@ -6,9 +6,8 @@ export default class CartService extends Service {
   @tracked cartItems = [];
   @tracked uniqueItem;
 
-@action
-lengthOfCart() {
-       return this.cartItems.length
-     };
-
+  @action
+  lengthOfCart() {
+    return this.cartItems.length;
+  }
 }

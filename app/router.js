@@ -10,4 +10,5 @@ Router.map(function () {
   this.route('products');
   this.route('cart');
   this.route('image');
+  this.route('checkout');
 });

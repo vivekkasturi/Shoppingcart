@@ -1,12 +1,9 @@
 import Controller from '@ember/controller';
-import {action} from '@ember/object';
-import {inject as service} from '@ember/service';
+import { action } from '@ember/object';
+import { inject as service } from '@ember/service';
 
 export default class ImageController extends Controller {
+  @service cart;
 
-@service cart;
-
-lengthOfCart= this.cart.lengthOfCart;
-
- 
+  lengthOfCart = this.cart.lengthOfCart;
 }

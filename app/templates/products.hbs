@@ -1,35 +1,47 @@
-<section class="products_comp">
-    <LinkTo @route="cart"><i class="fa fa-shopping-cart"></i><p>{{this.lengthOfCart}}</p></LinkTo>
+<Header />
+<section 
+class="products_comp">
+  {{#if (this.lengthOfCart)}}
+
+
+
+  <div class="icon-container">
+    <LinkTo @route="cart"><i class="fa fa-shopping-cart">{{this.lengthOfCart}}</i></LinkTo>
+  </div>
+
+  {{/if}}
 </section>
+
+
 {{#if this.toggle}}
-  <ul class="product-grid">
-    <p>
-        <img src={{this.zoomedItem.image}} alt="Product Image" width="300px" height="300px" />
-        <h3>{{this.zoomedItem.title}}</h3>
-        <span>Price</span> <span>$</span> {{this.zoomedItem.price}}
-        <span>Rating: </span>{{this.zoomedItem.rating.rate}}
-        {{!-- <LinkTo @route="cart">
-          <button type="button" {{on "click" (fn this.addToCart this.zoomedItem) }}>Add to Cart</button>
-        </LinkTo> --}}
-         <button type="button" {{on "click" (fn this.addToCart this.zoomedItem) }}>Add to Cart</button>
-        <button type="button" {{on "click" this.zoomOut}}>Zoom Out</button>
-      </p>
-  </ul>
-{{else}}
-  <ul class="product-grid">
-    {{#each this.model as |item|}}
-      <p>
-        <img src={{item.image}} alt="Product Image" width="100px" height="100px" />
-        <h3>{{item.title}}</h3>
-        <span>Price</span> <span>$</span> {{item.price}}
-        <span>Rating: </span>{{item.rating.rate}}
-        {{!-- <LinkTo @route="cart">
-          <button type="button" {{on "click" (fn this.addToCart item) }}>Add to Cart</button>
-        </LinkTo> --}}
-         <button type="button" {{on "click" (fn this.addToCart item) }}>Add to Cart</button>
-        <button type="button" {{on "click" (fn this.zoomIn item)}}>Zoom In</button>
-      </p>
-    {{/each}}
-  </ul>
+<ul class="product-grid">
+  <p>
+    <img src={{this.zoomedItem.image}} alt="Product Image" width="300px" height="300px" />
+  <h3>{{this.zoomedItem.title}}</h3>
+  <span>Price</span> <span>$</span> {{this.zoomedItem.price}}
+  <span>Rating: </span>{{this.zoomedItem.rating.rate}}
+  {{!-- <LinkTo @route="cart">
+    <button type="button" {{on "click" (fn this.addToCart this.zoomedItem) }}>Add to Cart</button>
+  </LinkTo> --}}
+  <button type="button" {{on "click" (fn this.addToCart this.zoomedItem) }}>Add to Cart</button>
   <button type="button" {{on "click" this.zoomOut}}>Zoom Out</button>
+  </p>
+</ul>
+{{else}}
+<ul class="product-grid">
+  {{#each this.model as |item|}}
+  <p>
+    <img src={{item.image}} alt="Product Image" width="100px" height="100px" />
+  <h3>{{item.title}}</h3>
+  <span>Price</span> <span>$</span> {{item.price}}
+  <span>Rating: </span>{{item.rating.rate}}
+  {{!-- <LinkTo @route="cart">
+    <button type="button" {{on "click" (fn this.addToCart item) }}>Add to Cart</button>
+  </LinkTo> --}}
+  <button type="button" {{on "click" (fn this.addToCart item) }}>Add to Cart</button>
+  <button type="button" {{on "click" (fn this.zoomIn item)}}>Zoom In</button>
+  </p>
+  {{/each}}
+</ul>
+<button type="button" {{on "click" this.zoomOut}}>Zoom Out</button>
 {{/if}}

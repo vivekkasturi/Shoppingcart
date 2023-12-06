@@ -12,7 +12,7 @@
 <h5>{{item.title}}</h5></span>
 <span><h5>{{item.price}}</h5></span>
 <span><input type="number" value="{{item.quantity}}" min="0" {{on "change" (fn this.modifiedQuantity item value="target.value" ) }} /></span>
-<span><button {{on 'click' (fn this.delete item)}}>Delete</button></span>
+<span><button type="button" {{on 'click' (fn this.delete item)}}>Delete</button></span>
 
 {{/each}}
 
@@ -39,9 +39,11 @@
  <div class="buttons">
    
      <LinkTo @route="products"> <button  class="back-button" type="button">Back</button></LinkTo>
-       <LinkTo  @route="index">
+
+     {{#if this.cart.cartItems}}
+       <LinkTo  @route="checkout">
       <button class="checkout-button" type="button">Checkout</button></LinkTo>
 
-   
+   {{/if}}
     </div>
 </div>

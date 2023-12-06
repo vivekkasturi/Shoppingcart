@@ -4,15 +4,35 @@
   background-color: rgb(187 184 207 / 59%);
 }
 
+/* 
 .fa.fa-shopping-cart {
-  display: flex;
-  font-size: 34px;
+
+  font-size: 100px;
   margin-right: 10px;
 }
 
 .products_comp {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+} */
+
+/* Update the styling for the cart icon container */
+
+/* Update the styling for the cart icon container */
+.products_comp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically in the center */
+}
+
+.icon-container {
+  margin-left: 1290px;
+}
+
+/* Update the styling for the cart icon */
+.fa.fa-shopping-cart {
+  font-size: 24px; /* Adjust the font size as needed */
 }
 
 li {
